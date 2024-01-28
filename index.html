@@ -22,11 +22,140 @@
                 <button><i class="fi fi-rr-download"></i>Download Report</button>
             </div>
             <div class="userId">
-                <div class="userId1"><i class="fi fi-ts-circle-user"></i><span>XXX</span></div>
-                <div class="userId2"></div>
+                <div class="userId1">
+                    <img src="/IMG/user.png" alt="">
+                    <p style="font-size: 13px;">USER</p>
+                </div>
+                <div class="userId2"><i class="fi fi-rr-user-add"></i></div>
             </div>
         </div>
-        <div id="divR"></div>
+        <div id="divR">
+
+            <nav>
+               <ul>
+                <li>
+                    <span>XXX</span>
+                    <span class="divR-spn">44</span>
+                </li>
+                <li style="border: 1.5px solid rgb(237, 38, 38);">
+                    <span>YYY</span>
+                    <span class="divR-spn" style="background-color: rgb(237, 38, 38);">29</span>
+                </li>
+                <li>
+                    <span>ZZZ</span>
+                    <span class="divR-spn">09</span>
+                </li>
+                <li style="border: 1.5px solid rgb(243, 131, 51);">
+                    <span>LLL</span>
+                    <span class="divR-spn" style="background-color: rgb(243, 131, 51);">39</span>
+                </li>
+                <li >
+                    <span>Pipeline is Safe</span>
+                </li>
+               </ul> 
+            </nav>
+
+            
+
+            <div id="inner-divR">
+
+                <div id="inner-divR1">
+                    <div id="innerDivR11">
+                        <input list="loc" name="Location" id="loc" placeholder="Select Location">
+                        <datalist id="loc">
+                            <option value="Ayodhya">Ayodhya</option>
+                            <option value="Lucknow">
+                            <option value="Varanasi">
+                            <option value="Allahabad">
+                        </datalist>
+                        <div id="Settings-icons">
+                            <i class="fi fi-rr-plus-small"></i>
+                            <i class="fi fi-rr-download upload"></i>
+                            <i class="fi fi-rr-settings-sliders"></i>
+                            <i class="fi fi-rr-download"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="inner-divR2">
+
+                <!-- ------------missed Packets----------------     -->
+
+                    <div id="missedPackets">  
+                        <div id="head">
+                            <span>Missed Packets/Hours</span>
+                            <span>➡️</span>
+                        </div> 
+                        <div id="progressBar">
+                            <div>
+                                <p class="pB1"></p>
+                                <p class="pB2"></p>
+                                <p class="pB3"></p>
+                            </div>
+                        </div>
+                        <div id="measurements">
+                            <div>
+                                <div class="num">2</div>
+                                <div id="MPV">
+                                    <p class="dot dot1"></p>
+                                    <p>XXX</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="num">26</div>
+                                <div id="MPV">
+                                    <p class="dot dot2"></p>
+                                    <p>XXX</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="num">7</div>
+                                <div id="MPV">
+                                    <p class="dot dot3"></p>
+                                    <p>XXX</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <!-- --------------Algo Status--------- -->
+
+                    <div id="algorithms-Status">  
+                        <div id="head">
+                            <span>Algorithms Status</span>
+                            <span>➡️</span>
+                        </div> 
+
+                        <div id="green-tick">
+                            <div>
+                                <img src="/IMG/istockphoto-1297956077-640x640-removebg-preview.png" alt="">
+                            </div>
+                            <p>Running in Real Time</p>
+                        </div>  
+                    </div>
+
+                <!-- ------------Pressure Values------------ -->
+
+                    <div id="pressure-Values">  
+                        <div id="head">
+                            <span>Pressure Values(PSI)</span>
+                            <span>➡️</span>
+                        </div>
+                    <div class="pV1">
+                        <div class="pV2">
+                            <span style="font-size: 40px;">31.56</span>
+                            <img src="/IMG/GreenZigzagArrow-removebg-preview.png" alt="">
+                        </div>
+                        <div class="pVLoc">
+                            <img src="/IMG/prev.png" alt="" style="margin-right: 10px;">
+                            <p>Ayodhya</p>
+                            <img src="/IMG/nxt.png" alt="" style="margin-left: 10px;">
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 <script src="/script.js"></script>
