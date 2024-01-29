@@ -5,6 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iSpock</title>
     <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Time', 'PSI'],
+          ['00:00',  10],
+          ['3:00',  20],
+          ['6:00',  17],
+          ['9:00',  40],
+          ['12:00',  50],
+          ['15:00',  15],
+          ['18:00',  18]
+        ]);
+
+        var options = {
+          title: '',
+        //   curveType: 'function',
+          legend: { position: 'none' }
+        };
+
+        var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+        chart.draw(data, options);
+      }
+    </script>
 </head>
 <body>
     <div id="mainDiv">
@@ -61,19 +89,35 @@
 
                 <div id="inner-divR1">
                     <div id="innerDivR11">
-                        <input list="loc" name="Location" id="loc" placeholder="Select Location">
+                        <input list="loc" name="loc" id="loc" placeholder="Select Location" />
+
                         <datalist id="loc">
-                            <option value="Ayodhya">Ayodhya</option>
-                            <option value="Lucknow">
-                            <option value="Varanasi">
-                            <option value="Allahabad">
-                        </datalist>
+                            <option value="Chocolate"></option>
+                            <option value="Coconut"></option>
+                            <option value="Mint"></option>
+                            <option value="Strawberry"></option>
+                            <option value="Vanilla"></option>
+                          </datalist>
+
                         <div id="Settings-icons">
                             <i class="fi fi-rr-plus-small"></i>
                             <i class="fi fi-rr-download upload"></i>
                             <i class="fi fi-rr-settings-sliders"></i>
                             <i class="fi fi-rr-download"></i>
                         </div>
+                    </div>
+
+                    <div id="graph">
+                        <div id="head">
+                            <span>XXX</span>
+                            <span>31.56 PSI</span>
+                            <span>➡️</span>
+                        </div>
+                        <div id="curve_chart" style="width:100%; height: 200px"></div>
+                    </div>
+
+                    <div id="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56985.22256039688!2d82.1579678121085!3d26.789769240128877!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399a07937e6d2823%3A0x5fc8f683b17f222b!2sAyodhya%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1706551468988!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
 
