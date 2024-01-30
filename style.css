@@ -68,18 +68,27 @@ body{
     padding: 12px 10px;
     width:200px;
     height: fit-content;
-    border-radius: 10px;
     display: flex;
+    border-radius: 10px;
     align-items: center;   
 }
-#divLNav ul li:hover{
+/* #divLNav ul li:hover{
     color: white;
     background-color: rgb(32, 31, 31); 
-}
-#divLNav ul li:active{
+} */
+.focused{
     color: white;
+    border-radius: 10px;
     background-color: rgb(32, 31, 31); 
 }
+.blurred{
+    color: black;
+    background-color: white; 
+}
+/* #divLNav ul li:active{
+    color: white;
+    background-color: rgb(32, 31, 31); 
+} */
 
 #divLNav ul i, #divLNav button i {
     margin-right: 10px;
@@ -209,7 +218,7 @@ body{
         /* align-items: center; */
         justify-content: space-between;
         overflow-y: scroll;
-        gap:20px;
+        gap:15px;
     }
     #innerDivR11{
         display: flex;
@@ -275,9 +284,79 @@ body{
         font-weight: 600;
     }
     #curve_chart{
-        /* margin-left: -30px; */
     }
 
+    #eventHealth{
+        display: flex;
+        justify-content: space-between;
+        /* border: 2px solid red; */
+    }
+    #events{
+        /* border: 2px solid yellow; */
+        height: 100%;
+        background-color: #fff;
+        width: 66%;
+        padding: 10px;
+        border-radius: 5px;
+        height: 170px;
+    }
+    #health{
+        background-color: #fff;
+        /* border: 2px solid green; */
+        border-radius: 5px;
+        padding: 10px;
+        height: 170px;
+        width: 31%;
+    }
+    #healthPercent{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .percent{
+        border: 15px solid rgb(33, 245, 44);
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    #health p{
+        padding: 2px 15px;
+        border-radius: 10px;
+        color: black;
+        background-color: rgb(220, 223, 224);
+        font-size: 8px;
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+    }
+    #health img{
+        height: 14px;
+        width: 14px;
+        margin-left: 10px;
+    }
+
+    
+    .eventRows{
+        margin-top: 8px;
+        font-size: 12px;
+        width: 82%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100px;
+        
+    }
+
+    .er1{
+        color: gray;
+    }
+    
     #map iframe{
         border-radius: 8px;
     }
